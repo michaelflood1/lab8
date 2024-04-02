@@ -107,7 +107,7 @@ async function getPosts(user) {
 // Your code here
 try {
 const response = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${user.id}`);
-if (!response.ok) {
+if (!response.ok) { /* i forgot the ! here and spent like an hour trying to figure out why i couldnt get a response to work properly :(*/ 
   throw new Error('Failed to fetch posts');
 } else {
   const posts = await response.json();
