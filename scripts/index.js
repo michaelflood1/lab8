@@ -89,7 +89,7 @@ async function getUsers() {
     const response = await fetch('https://jsonplaceholder.typicode.com/users');
 
     if (!response.ok) {
-      throw new Error('Failed to fetch users');
+      throw new Error('could not fetch');
     }
 
     const users = await response.json();
@@ -113,7 +113,7 @@ try {
   const response = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${user.id}`);
 
 if (!response.ok) { /* i forgot the ! here and spent like an hour trying to figure out why i couldnt get a response to work properly :(*/ 
-throw new Error('Failed to fetch posts');
+throw new Error('could not fetch');
 
 } else {
 const posts = await response.json();
